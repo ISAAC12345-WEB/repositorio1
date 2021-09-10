@@ -1,6 +1,7 @@
 package com.empresa.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,26 @@ public class MedicamentoServiceImpl implements MedicamentoService{
 		// TODO Auto-generated method stub
 		return repository.findAll();
 	}
+
+	@Override
+	public Optional<Medicamento> buscaPorId(int idMedicamento) {
+		// TODO Auto-generated method stub
+		return repository.findById(idMedicamento);
+	}
+
+	@Override
+	public List<Medicamento> listaMedicamentoPorNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return repository.findByNombre(nombre);
+	}
+
+	@Override
+	public Optional<Medicamento> listaMedicamentoPorStock(int idMedicamento) {
+		// TODO Auto-generated method stub
+		return repository.findById(idMedicamento);
+	}
+
+	
 
 	
 	

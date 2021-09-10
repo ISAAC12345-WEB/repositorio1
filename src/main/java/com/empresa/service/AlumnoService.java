@@ -9,6 +9,7 @@ public interface AlumnoService {
 
 	public abstract Alumno insertaActualiza(Alumno obj);
 	public abstract List<Alumno> listaAlumno();
+	
 	public abstract Optional<Alumno> buscaPorId(int idAlumno);//permitir y devolver de preguntar de forma rapida encontrar un valor
 	
 	public abstract void eliminaPorId(int idAlumno);
